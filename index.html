@@ -23,9 +23,41 @@
       height: 100%;
       pointer-events: none;
     }
+
+    @keyframes fall {
+      from {
+        top: 0%;
+      }
+      to {
+        top: 100%;
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .flake-container {
+      position: absolute;
+      top: 0;
+      animation: fall 10s 0s 1 linear forwards;
+    }
+
+    .flake-container img {
+      animation: rotate 6s 0s infinite forwards;
+    }
   </style>
 </head>
 <body>
-  <div id="snow-container"></div>
+  <div id="snow-container">
+    <div class="flake-container">
+      <img src="./images/flakes/flake.png" />
+    </div>
+  </div>
 </body>
 </html>
