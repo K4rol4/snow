@@ -42,14 +42,27 @@
       }
     }
 
+    @keyframes leftToRight {
+      from {
+        left: 0%;
+      }
+      to {
+        left: 100%;
+      }
+    }
+
     .flake-container {
       position: absolute;
+      padding: 0 50px;
       top: 0;
+
       animation: fall 10s 0s 1 linear forwards;
     }
 
     .flake-container img {
-      animation: rotate 6s 0s infinite forwards;
+      position: absolute;
+      animation: rotate 6s 0s infinite linear forwards,
+        leftToRight 2s 0s infinite linear alternate;
     }
   </style>
 </head>
